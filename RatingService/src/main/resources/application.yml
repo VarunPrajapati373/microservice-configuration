@@ -1,0 +1,20 @@
+server:
+  port: 8083
+  
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017
+      database: microservices
+      
+  application:
+    name: RATING-SERVICE   
+    
+  config:
+    import: optional:configserver:http://localhost:8085 
+    
+
+okta:
+  oauth2:
+    issuer: https://dev-66260492.okta.com/oauth2/default
+    audience: api://default
